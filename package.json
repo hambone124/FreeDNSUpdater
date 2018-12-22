@@ -1,0 +1,15 @@
+{
+  "name": "ddnsupdate",
+  "version": "0.1.0",
+  "description": "Update FreeDNS with current IP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamilton Perez",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.4.0",
+    "request": "^2.88.0"
+  }
+}
