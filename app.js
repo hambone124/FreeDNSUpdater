@@ -1,17 +1,15 @@
 const request = require("request"),
-      fs = require("fs"),
-      token = fs.readFileSync("token", "utf8");
-
-const options = {
-  "url" : `http://sync.afraid.org/u/${token}/`
-};
+  fs = require("fs"),
+  token = fs.readFileSync("token", "utf8"),
+  options = {
+    "url": `http://sync.afraid.org/u/${token}/`
+  };
 
 function appendLog(event) {
-  const dateString = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+  const dateString = new Date().toLocaleString("en-US", {
+    timeZone: "America/New_York"
+  });
   console.log(`${dateString}: ${event}`);
-//   let stream = fs.createWriteStream("freedns.log", {flags: 'a'});
-//   stream.write(`${dateString}: ${event}\n`);
-//   stream.end();
 }
 
 function callback(error, response, body) {
