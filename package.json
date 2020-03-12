@@ -4,12 +4,13 @@
   "description": "Update FreeDNS with current IP",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "node test.js"
   },
   "author": "Hamilton Perez",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^5.4.0",
+    "mongoose": "^5.9.4",
     "request": "^2.88.0"
   }
 }

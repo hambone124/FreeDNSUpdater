@@ -3,7 +3,8 @@ const request = require("request"),
   token = fs.readFileSync("token", "utf8"),
   options = {
     "url": `http://sync.afraid.org/u/${token}/`
-  };
+  },
+  interval = 900000;
 
 function appendLog(event) {
   const dateString = new Date().toLocaleString("en-US", {
@@ -21,4 +22,5 @@ function callback(error, response, body) {
 }
 
 appendLog("FreeDNS updater started");
-setInterval(() => request(options, callback), 900000);
+request(options, callback);
+setInterval(() => request(options, callback), interval);
